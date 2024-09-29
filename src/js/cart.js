@@ -5,12 +5,10 @@ import { getLocalStorage } from "./utils.mjs";
 function renderCartContents() {
   let cartItems = getLocalStorage("so-cart");
 
-  // Verificar si cartItems es un array
   if (!Array.isArray(cartItems)) {
     cartItems = [];
   }
 
-  // Si el carrito está vacío, mostrar un mensaje adecuado
   if (cartItems.length === 0) {
     document.querySelector(".product-list").innerHTML = "<p>Your cart is empty.</p>";
     return;
