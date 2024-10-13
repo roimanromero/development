@@ -5,6 +5,7 @@ const dataSource = new ProductData("tents");
 
 // Función para añadir un producto al carrito
 function addProductToCart(product) {
+  //get current cart item from localStorage
   let cartItems = getLocalStorage("so-cart");
 
   // Inicializar array vacío si no existe
